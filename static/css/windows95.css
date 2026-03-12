@@ -1,0 +1,56 @@
+/* Windows 95 Theme */
+body.win95 {
+  background-color: #008080; /* Classic Win95 Teal Background */
+  font-family: 'MS PGothic', 'MS Sans Serif', 'Tahoma', sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 20px;
+}
+
+.win95-window {
+  background-color: #c0c0c0;
+  border: 2px solid;
+  border-color: #dfdfdf #000 #000 #dfdfdf;
+  padding: 2px;
+  box-shadow: inset 1px 1px #fff, inset -1px -1px #808080;
+}
+
+.win95-titlebar {
+  background-color: #000080;
+  color: white;
+  padding: 2px 4px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.win95-content {
+  padding: 10px;
+}
+
+.win95-button {
+  background-color: #c0c0c0;
+  border: 2px solid;
+  border-color: #dfdfdf #000 #000 #dfdfdf;
+  box-shadow: inset 1px 1px #fff, inset -1px -1px #808080;
+  padding: 4px 10px;
+  font-family: inherit;
+  cursor: pointer;
+  color: #000;
+}
+
+.win95-button:active {
+  border-color: #000 #dfdfdf #dfdfdf #000;
+  box-shadow: inset 1px 1px #808080, inset -1px -1px #fff;
+  padding: 5px 9px 3px 11px; /* Shift text for pressed effect */
+}
+
+.win95-input {
+  background-color: #fff;
+  border: 2px solid;
+  border-color: #808080 #dfdfdf #dfdfdf #808080;
+  box-shadow: inset 1px 1px #000, inset -1px -1px #fff;
+  padding: 4px;
+  color: #000;
+}

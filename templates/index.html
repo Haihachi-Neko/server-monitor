@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>サーバー監視</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/glassmorphism.css') }}">
+        <style>
+            .container { display: flex; flex-wrap: wrap; gap: 20px; padding: 20px; }
+            .card { 
+                border: 2px solid #ccc; border-radius: 12px; 
+                padding: 15px; width: 220px; font-family: sans-serif;
+            }
+            .status-ok { border-color: #28a745; }
+            .status-slow { border-color: #ffc107; }
+            .status-down { border-color: #dc3545; }
+            
+            .val { font-weight: bold; }
+        </style>
+    </head>
+    <body class="glass">
+        <div class="glass-window" style="width: 800px; margin: 50px auto;">
+            <div class="glass-titlebar">
+                <span>監視ツール</span>
+                <button class="glass-button" onClick="history.back();">X</button>
+            </div>
+            <div class="glass-content">
+                <div class="container">
+                    <div id="card-google" class="card">
+                        <h3>Google</h3>
+                        <img id="icon-google" src="/static/icons/ok.svg" width="50" height="50" alt="ステータス">
+                        <p>状態: <span id="status-google" class="val">--</span></p>
+                        <p>レイテンシ: <span id="latency-google" class="val">--</span> ms</p>
+                    </div>
+                    <div id="card-github" class="card">
+                        <h3>GitHub</h3>
+                        <img id="icon-github" src="/static/icons/ok.svg" width="50" height="50" alt="ステータス">
+                        <p>状態: <span id="status-github" class="val">--</span></p>
+                        <p>レイテンシ: <span id="latency-github" class="val">--</span> ms</p>
+                    </div>
+                    <!-- 改行: <div style="width: 100%;"></div> -->
+                </div>
+            </div>
+        </div>
+        <script src="{{ url_for('static', filename='js/monitor.js') }}"></script>
+    </body>
+</html>

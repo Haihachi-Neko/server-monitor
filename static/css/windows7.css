@@ -1,0 +1,135 @@
+/* Windows 7 Aero Glass Theme - Enhanced Realism */
+body.win7 {
+  background-color: #1d6eaf;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px),
+    linear-gradient(135deg, #1d6eaf 0%, #0d4677 100%);
+  background-size: 20px 20px, 20px 20px, 100% 100%;
+  font-family: 'Segoe UI', 'Meiryo', sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.win7-window {
+  background: rgba(220, 235, 255, 0.4); /* Glass base */
+  background-image: linear-gradient(rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.1) 40%, rgba(255,255,255,0.0) 41%, rgba(255,255,255,0.2) 100%);
+  border: 1px solid rgba(110, 140, 180, 0.9);
+  border-radius: 8px;
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.6), 
+    inset 0 1px 1px rgba(255, 255, 255, 0.9),
+    inset 0 0 3px rgba(255, 255, 255, 0.5),
+    inset 1px 0 1px rgba(255, 255, 255, 0.6),
+    inset -1px 0 1px rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 8px 8px 8px 8px;
+  position: relative;
+}
+
+/* Inner glow line */
+.win7-window::before {
+  content: '';
+  position: absolute;
+  top: 1px; left: 1px; right: 1px; bottom: 1px;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 7px;
+  pointer-events: none;
+}
+
+.win7-titlebar {
+  padding: 0px 4px 8px 4px;
+  color: #000;
+  text-shadow: 0 0 8px #fff, 0 0 12px #fff, 0 0 15px rgba(255,255,255,0.8);
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Win7 specific Red Close Button */
+.win7-titlebar > button {
+  background: rgba(220, 100, 100, 0.6);
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 0 4px 0 0;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+  width: 45px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 8px; /* Inside the padding */
+  cursor: pointer;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  text-shadow: 0 0 2px #000;
+  padding: 0;
+}
+
+.win7-titlebar > button:hover {
+  background: radial-gradient(circle at center, #ff8b8b 0%, #e24b4b 60%, #c81c1c 100%);
+  border-color: rgba(0,0,0,0.6);
+  box-shadow: inset 0 0 3px rgba(255,255,255,1), 0 0 5px rgba(226, 75, 75, 0.8);
+}
+
+.win7-titlebar > button:active {
+  background: radial-gradient(circle at center, #d82b2b 0%, #aa1414 100%);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.win7-content {
+  background-color: #f0f0f0;
+  border: 1px solid rgba(0,0,0,0.5);
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  z-index: 1; /* Keep above the glow line */
+}
+
+.win7-button {
+  background: linear-gradient(to bottom, #f2f2f2 0%, #ebebeb 45%, #dddddd 50%, #cfcfcf 100%);
+  border: 1px solid #707070;
+  border-radius: 3px;
+  padding: 5px 18px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1), 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #000;
+}
+
+.win7-button:hover {
+  background: linear-gradient(to bottom, #eaf6fd 0%, #d9f0fc 45%, #bee6fd 50%, #a7d9f5 100%);
+  border-color: #3c7fb1;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 1), inset 0 0 3px #bee6fd;
+}
+
+.win7-button:active {
+  background: linear-gradient(to bottom, #e5f4fc 0%, #c4e5f6 45%, #98d1ef 50%, #68b3db 100%);
+  border-color: #2c628b;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.win7-input {
+  border: 1px solid #abadb3;
+  padding: 5px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+}
+.win7-input:hover {
+  border-color: #5bb2e8;
+}
+.win7-input:focus {
+  border-color: #3da1e3;
+  box-shadow: 0 0 3px #3da1e3;
+  outline: none;
+}

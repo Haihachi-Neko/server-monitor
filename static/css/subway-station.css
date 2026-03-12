@@ -1,0 +1,137 @@
+/* Subway Station Sign Theme */
+body.subway {
+    background-color: #1a1a1a;
+    /* Dark tunnel background */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.subway-window {
+    background-color: #fff;
+    color: #000;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-top: 20px solid #ffcc00;
+    /* Tokyo Metro Ginza line color or standard warning yellow */
+    position: relative;
+}
+
+/* Add a line color indicator block */
+.subway-window::before {
+    content: 'G';
+    /* Example Line Identifier */
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    background-color: #000;
+    color: #ffcc00;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 0 0 4px 4px;
+}
+
+.subway-titlebar {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #fff;
+    /* White separator line */
+}
+
+/* Arrow indicator for directions */
+.subway-titlebar::after {
+    content: '→';
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.subway-content {
+    padding: 30px;
+    background-color: #f4f4f4;
+    /* Slightly off-white for sign body */
+}
+
+.subway-content-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+/* Information block style */
+.subway-info-block {
+    background-color: #fff;
+    border-left: 8px solid #00529b;
+    /* Tokyo Metro Tozai line color or standard blue */
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.subway-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subway-button:hover {
+    background-color: #333;
+}
+
+/* Add generic icon layout for buttons */
+.subway-button::before {
+    content: '>';
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.subway-input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    padding: 12px 15px;
+    font-size: 16px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    border-radius: 2px;
+}
+
+.subway-input:focus {
+    outline: none;
+    border-color: #000;
+}
